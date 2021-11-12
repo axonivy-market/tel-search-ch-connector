@@ -36,13 +36,13 @@ Py0 f3 clientId 20621516-9434-437b-8a8d-d41da2e7917b #txt
 Py0 f3 queryParams 'was=in.what;
 ' #txt
 Py0 f3 resultType cz.jirutka.atom.jaxb.Feed #txt
-Py0 f3 responseCode 'import com.sun.org.apache.xerces.internal.dom.ElementNSImpl;
+Py0 f3 responseCode 'import org.w3c.dom.Element;
 import cz.jirutka.atom.jaxb.Entry;
 
 ivy.log.debug(result);
 
 for(Entry entry : result.entries){
-	ElementNSImpl element = entry.content as ElementNSImpl;
+	Element element = entry.content as Element;
 	out.matches.add(element.getTextContent());	
 }' #txt
 Py0 f3 clientErrorCode ivy:error:rest:client #txt
