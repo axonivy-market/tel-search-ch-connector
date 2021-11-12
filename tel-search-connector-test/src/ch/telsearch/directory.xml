@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<feed xml:lang="de" xmlns="http://www.w3.org/2005/Atom" xmlns:openSearch="http://a9.com/-/spec/opensearchrss/1.0/" xmlns:tel="http://tel.search.ch/api/spec/result/1.0/">
+  <id>https://tel.search.ch/api/fb10afc3a3e24bfa6da1b80fb59869e6</id>
+  <title type="text">tel.search.ch API Search Results</title>
+  <generator version="1.0" uri="https://tel.search.ch">tel.search.ch</generator>
+  <updated>2021-11-12T09:50:47+01:00</updated>
+  <link href="https://tel.search.ch/result?was=john+meier" rel="alternate" type="text/html" />
+  <link href="http://tel.search.ch/api/?was=john+meier" type="application/atom+xml" rel="self" />
+  <openSearch:totalResults>8</openSearch:totalResults>
+  <openSearch:startIndex>1</openSearch:startIndex>
+  <openSearch:itemsPerPage>10</openSearch:itemsPerPage>
+  <openSearch:Query role="request" searchTerms="john meier " startPage="1"></openSearch:Query>
+  <openSearch:Image height="1" width="1" type="image/gif">https://www.search.ch/audit/CP/tel/de/api</openSearch:Image>
+  <entry>
+    <id>urn:uuid:b15768ab56be5411</id>
+    <updated>2019-03-22T03:04:10+01:00</updated>
+    <published>2019-03-22T03:04:10+01:00</published>
+    <title type="text">Meier, John</title>
+    <content type="text">Meier, John
+    Via General Guisan 11
+    6828 Balerna TI
+    *091 682 12 17</content>
+    <tel:nopromo>*</tel:nopromo>
+    <author>
+      <name>tel.search.ch</name>
+    </author>
+    <link href="https://tel.search.ch/balerna/via-general-guisan-11/john-meier" title="Details" rel="alternate" type="text/html" />
+    <link href="https://tel.search.ch/vcard/Meier.vcf?key=b15768ab56be5411" type="text/x-vcard" title="VCard Download" rel="alternate" />
+    <link href="https://tel.search.ch/edit/?id=b15768ab56be5411" rel="edit" type="text/html" />
+  </entry>
+  <entry>
+    <id>urn:uuid:b3353be44a831133</id>
+    <updated>2019-04-23T23:59:34+02:00</updated>
+    <published>2019-04-23T23:59:34+02:00</published>
+    <title type="text">Meier, John</title>
+    <content type="text">Meier, John
+    Dorfstrasse 53
+    9055 Bühler AR
+    *071 790 08 80</content>
+    <tel:nopromo>*</tel:nopromo>
+    <author>
+      <name>tel.search.ch</name>
+    </author>
+    <link href="https://tel.search.ch/buehler/dorfstrasse-53/john-meier" title="Details" rel="alternate" type="text/html" />
+    <link href="https://tel.search.ch/vcard/Meier.vcf?key=b3353be44a831133" type="text/x-vcard" title="VCard Download" rel="alternate" />
+    <link href="https://tel.search.ch/edit/?id=b3353be44a831133" rel="edit" type="text/html" />
+  </entry>
+  <entry>
+    <id>urn:uuid:0509780a63d009f1</id>
+    <updated>2019-03-26T13:31:32+01:00</updated>
+    <published>2019-03-26T13:31:32+01:00</published>
+    <title type="text">Meier, Martin, Renate, John und Jessica (-Möhr)</title>
+    <content type="text">Meier, Martin, Renate, John und Jessica (-Möhr)
+    Dipl. Bauleiter / Dipl. Damenschneiderin
+    Weiligstrasse 28A
+    7310 Bad Ragaz SG
+    081 302 59 50</content>
+    <author>
+      <name>tel.search.ch</name>
+    </author>
+    <link href="https://tel.search.ch/bad-ragaz/weiligstrasse-28a/martin-renate-john-und-jessica-meier" title="Details" rel="alternate" type="text/html" />
+    <link href="https://tel.search.ch/vcard/Meier.vcf?key=0509780a63d009f1" type="text/x-vcard" title="VCard Download" rel="alternate" />
+    <link href="https://tel.search.ch/edit/?id=0509780a63d009f1" rel="edit" type="text/html" />
+  </entry>
+  <entry>
+    <id>urn:uuid:ecb02e149946d263</id>
+    <updated>2021-09-23T00:59:41+02:00</updated>
+    <published>2021-09-23T00:59:41+02:00</published>
+    <title type="text">John, Barbara und Lukas (-Meier)</title>
+    <content type="text">John, Barbara und Lukas (-Meier)
+    Uttwilerstrasse 11
+    8593 Kesswil TG
+    *071 460 00 68</content>
+    <tel:nopromo>*</tel:nopromo>
+    <author>
+      <name>tel.search.ch</name>
+    </author>
+    <link href="https://tel.search.ch/kesswil/uttwilerstrasse-11/barbara-und-lukas-john" title="Details" rel="alternate" type="text/html" />
+    <link href="https://tel.search.ch/vcard/John.vcf?key=ecb02e149946d263" type="text/x-vcard" title="VCard Download" rel="alternate" />
+    <link href="https://tel.search.ch/edit/?id=ecb02e149946d263" rel="edit" type="text/html" />
+  </entry>
+  <entry>
+    <id>urn:uuid:bacadb4daf181700</id>
+    <updated>2019-03-20T23:18:48+01:00</updated>
+    <published>2019-03-20T23:18:48+01:00</published>
+    <title type="text">Meier, Paula (-John)</title>
+    <content type="text">Meier, Paula (-John)
+    Hinterdorfstrasse 1
+    5074 Eiken AG
+    062 871 31 12</content>
+    <author>
+      <name>tel.search.ch</name>
+    </author>
+    <link href="https://tel.search.ch/eiken/hinterdorfstrasse-1/paula-meier" title="Details" rel="alternate" type="text/html" />
+    <link href="https://tel.search.ch/vcard/Meier.vcf?key=bacadb4daf181700" type="text/x-vcard" title="VCard Download" rel="alternate" />
+    <link href="https://tel.search.ch/edit/?id=bacadb4daf181700" rel="edit" type="text/html" />
+  </entry>
+  <entry>
+    <id>urn:uuid:6d274225682cdff3</id>
+    <updated>2019-07-16T08:57:43+02:00</updated>
+    <published>2019-07-16T08:57:43+02:00</published>
+    <title type="text">Meier, Ulrich (-Johnson)</title>
+    <content type="text">Meier, Ulrich (-Johnson)
+    Chemin des Bouvreuils 27
+    1234 Pinchat GE
+    *022 343 35 14</content>
+    <tel:nopromo>*</tel:nopromo>
+    <author>
+      <name>tel.search.ch</name>
+    </author>
+    <link href="https://tel.search.ch/pinchat/chemin-des-bouvreuils-27/ulrich-meier" title="Details" rel="alternate" type="text/html" />
+    <link href="https://tel.search.ch/vcard/Meier.vcf?key=6d274225682cdff3" type="text/x-vcard" title="VCard Download" rel="alternate" />
+    <link href="https://tel.search.ch/edit/?id=6d274225682cdff3" rel="edit" type="text/html" />
+  </entry>
+  <entry>
+    <id>urn:uuid:bb6a0da523b72504</id>
+    <updated>2021-11-10T09:49:05+01:00</updated>
+    <published>2021-11-10T09:49:05+01:00</published>
+    <title type="text">AEBLI AG</title>
+    <content type="text">AEBLI AG
+    sanit. Inst.
+    Gipserhütte 4
+    8755 Ennenda GL
+    *055 640 14 62</content>
+    <tel:nopromo>*</tel:nopromo>
+    <author>
+      <name>tel.search.ch</name>
+    </author>
+    <link href="https://tel.search.ch/ennenda/gipserhuette-4/aebli-ag" title="Details" rel="alternate" type="text/html" />
+    <link href="https://tel.search.ch/vcard/AEBLI-AG.vcf?key=bb6a0da523b72504" type="text/x-vcard" title="VCard Download" rel="alternate" />
+    <link href="https://tel.search.ch/edit/?id=bb6a0da523b72504" rel="edit" type="text/html" />
+  </entry>
+  <entry>
+    <id>urn:uuid:dc28e20b82a169dc</id>
+    <updated>2021-04-22T22:00:52+02:00</updated>
+    <published>2021-04-22T22:00:52+02:00</published>
+    <title type="text">Concierge</title>
+    <content type="text">Concierge
+    Meier Johnny
+    Route de Bursinel 29
+    1195 Dully VD
+    *079 689 45 17</content>
+    <tel:nopromo>*</tel:nopromo>
+    <author>
+      <name>tel.search.ch</name>
+    </author>
+    <link href="https://tel.search.ch/dully/route-de-bursinel-29/concierge" title="Details" rel="alternate" type="text/html" />
+    <link href="https://tel.search.ch/vcard/Concierge.vcf?key=dc28e20b82a169dc" type="text/x-vcard" title="VCard Download" rel="alternate" />
+    <link href="https://tel.search.ch/edit/?id=dc28e20b82a169dc" rel="edit" type="text/html" />
+  </entry>
+</feed>
