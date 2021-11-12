@@ -15,23 +15,36 @@ Py0 @RestClientCall f3 '' #zField
 Py0 @PushWFArc f4 '' #zField
 Py0 @PushWFArc f2 '' #zField
 >Proto Py0 Py0 PhoneDirectory #zField
-Py0 f0 inParamDecl '<> param;' #txt
-Py0 f0 outParamDecl '<> result;' #txt
-Py0 f0 callSignature call() #txt
+Py0 f0 inParamDecl '<String what> param;' #txt
+Py0 f0 inParamInfo 'what.description=name or phone number' #txt
+Py0 f0 inParamTable 'out.what=param.what;
+' #txt
+Py0 f0 outParamDecl '<java.util.List<String> matches> result;' #txt
+Py0 f0 outParamTable 'result.matches=in.matches;
+' #txt
+Py0 f0 callSignature search(String) #txt
 Py0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>call()</name>
+        <name>search(String)</name>
     </language>
 </elementInfo>
 ' #txt
 Py0 f0 81 49 30 30 -13 17 #rect
 Py0 f1 337 49 30 30 0 15 #rect
 Py0 f3 clientId 20621516-9434-437b-8a8d-d41da2e7917b #txt
-Py0 f3 queryParams 'was="John Meier";
+Py0 f3 queryParams 'was=in.what;
 ' #txt
 Py0 f3 resultType cz.jirutka.atom.jaxb.Feed #txt
-Py0 f3 responseCode ivy.log.debug(result); #txt
+Py0 f3 responseCode 'import com.sun.org.apache.xerces.internal.dom.ElementNSImpl;
+import cz.jirutka.atom.jaxb.Entry;
+
+ivy.log.debug(result);
+
+for(Entry entry : result.entries){
+	ElementNSImpl element = entry.content as ElementNSImpl;
+	out.matches.add(element.getTextContent());	
+}' #txt
 Py0 f3 clientErrorCode ivy:error:rest:client #txt
 Py0 f3 statusErrorCode ivy:error:rest:client #txt
 Py0 f3 168 42 112 44 0 -8 #rect
