@@ -2,3 +2,5 @@ RestClients:
   tel-search:
     UUID: 20621516-9434-437b-8a8d-d41da2e7917b
     Url: http://{ivy.engine.host}:{ivy.engine.http.port}/{ivy.request.application}/api/telMock
+    Features:
+    - com.axonivy.telsearch.AtomXmlFeature
