@@ -30,6 +30,10 @@ Py0 f1 337 49 30 30 0 15 #rect
 Py0 f3 clientId 20621516-9434-437b-8a8d-d41da2e7917b #txt
 Py0 f3 queryParams 'was="John Meier";
 ' #txt
+Py0 f3 resultType cz.jirutka.atom.jaxb.Feed #txt
+Py0 f3 responseCode ivy.log.debug(result); #txt
+Py0 f3 clientErrorCode ivy:error:rest:client #txt
+Py0 f3 statusErrorCode ivy:error:rest:client #txt
 Py0 f3 168 42 112 44 0 -8 #rect
 Py0 f4 111 64 168 64 #arcP
 Py0 f2 280 64 337 64 #arcP
