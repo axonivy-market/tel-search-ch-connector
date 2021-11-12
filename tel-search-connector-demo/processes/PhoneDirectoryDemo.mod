@@ -31,8 +31,10 @@ Po0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 Po0 f0 @C|.responsibility Everybody #txt
 Po0 f0 81 49 30 30 -21 17 #rect
 Po0 f1 337 49 30 30 0 15 #rect
-Po0 f3 processCall PhoneDirectory:call() #txt
-Po0 f3 requestActionDecl '<> param;' #txt
+Po0 f3 processCall PhoneDirectory:search(String) #txt
+Po0 f3 requestActionDecl '<String what> param;' #txt
+Po0 f3 requestMappingAction 'param.what="John Meier";
+' #txt
 Po0 f3 responseMappingAction 'out=in;
 ' #txt
 Po0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>

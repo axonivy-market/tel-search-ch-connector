@@ -1,2 +1,6 @@
 PhoneDirectoryData #class
 com.axonivy.connector.telsearch.tel.search.connector #namespace
+what String #field
+what PERSISTENT #fieldModifier
+matches java.util.List<String> #field
+matches PERSISTENT #fieldModifier
