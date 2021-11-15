@@ -23,10 +23,15 @@ Py0 f0 outParamDecl '<java.util.List<String> matches> result;' #txt
 Py0 f0 outParamTable 'result.matches=in.matches;
 ' #txt
 Py0 f0 callSignature search(String) #txt
+Py0 f0 @CG|tags connector #txt
 Py0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
         <name>search(String)</name>
+        <tool>
+            <toolName></toolName>
+            <url></url>
+        </tool>
     </language>
 </elementInfo>
 ' #txt
@@ -43,7 +48,7 @@ ivy.log.debug(result);
 
 for(Entry entry : result.entries){
 	Element element = entry.content as Element;
-	out.matches.add(element.getTextContent());	
+	out.matches.add(element.getTextContent());
 }' #txt
 Py0 f3 clientErrorCode ivy:error:rest:client #txt
 Py0 f3 statusErrorCode ivy:error:rest:client #txt
@@ -52,6 +57,13 @@ Py0 f4 111 64 168 64 #arcP
 Py0 f2 280 64 337 64 #arcP
 >Proto Py0 .type com.axonivy.connector.telsearch.tel.search.connector.PhoneDirectoryData #txt
 >Proto Py0 .processKind CALLABLE_SUB #txt
+>Proto Py0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <desc>This tel.search.ch connector allows you to pass a "what" in order to obtain the matching phone directory entries.</desc>
+    </language>
+</elementInfo>
+' #txt
 >Proto Py0 0 0 32 24 18 0 #rect
 >Proto Py0 @|BIcon #fIcon
 Py0 f0 mainOut f4 tail #connect
