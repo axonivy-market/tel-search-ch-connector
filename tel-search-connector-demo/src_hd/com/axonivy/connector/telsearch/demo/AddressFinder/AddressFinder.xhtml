@@ -30,9 +30,11 @@
 				<br />
 				<p:orderList value="#{data.entries}" var="entry" responsive="true"
 					style="width:400px" itemValue="#{entry}" converter="ivy.ListItem"
-					id="entryList" controlsLocation="right">
+					id="entryList" controlsLocation="none">
 					<f:facet name="caption">Entries</f:facet>
-					<p:column>#{entry}</p:column>
+					<p:column>
+						<pre>#{entry}</pre>
+					</p:column>
 				</p:orderList>
 
 
