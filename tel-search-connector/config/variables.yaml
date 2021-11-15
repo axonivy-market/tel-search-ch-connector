@@ -8,4 +8,4 @@
 Variables:
   # Get your key for unlimited access @ https://tel.search.ch/api/getkey
   # [password]
-  tel.search.api.key: "12345_EXAMPLE_KEY"
+  tel.search.api.key: ""
