@@ -6,4 +6,6 @@
 # '<project>/Config/_<environment>/variables.yaml
 #
 Variables:
-#  myVariable: value
+  # Get your key for unlimited access @ https://tel.search.ch/api/getkey
+  # [password]
+  tel.search.api.key: "12345_EXAMPLE_KEY"

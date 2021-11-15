@@ -4,3 +4,4 @@ RestClients:
     Url: http://{ivy.engine.host}:{ivy.engine.http.port}/{ivy.request.application}/api/telMock
     Features:
     - com.axonivy.telsearch.AtomXmlFeature
+    - com.axonivy.telsearch.AuthKeyFeature
