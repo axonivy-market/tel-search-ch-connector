@@ -23,6 +23,7 @@ Py0 f0 outParamDecl '<java.util.List<String> matches> result;' #txt
 Py0 f0 outParamTable 'result.matches=in.matches;
 ' #txt
 Py0 f0 callSignature search(String) #txt
+Py0 f0 @CG|tags connector #txt
 Py0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
