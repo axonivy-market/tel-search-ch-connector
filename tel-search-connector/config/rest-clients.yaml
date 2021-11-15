@@ -4,3 +4,4 @@ RestClients:
     Url: https://tel.search.ch/api/
     Features:
     - com.axonivy.telsearch.AtomXmlFeature
+    - com.axonivy.telsearch.AuthKeyFeature
