@@ -24,7 +24,7 @@ As0 @PushWFArc f8 '' #zField
 As0 f0 guid 17D14C4DFA9C8F10 #txt
 As0 f0 method start() #txt
 As0 f0 inParameterDecl '<> param;' #txt
-As0 f0 inParameterMapAction 'out.matches=[];
+As0 f0 inParameterMapAction 'out.entries=[];
 ' #txt
 As0 f0 outParameterDecl '<> result;' #txt
 As0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -67,7 +67,7 @@ As0 f9 requestActionDecl '<String what> param;' #txt
 As0 f9 requestMappingAction 'param.what=in.search;
 ' #txt
 As0 f9 responseMappingAction 'out=in;
-out.matches=result.matches;
+out.entries=result.matches;
 out.search="";
 ' #txt
 As0 f9 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>

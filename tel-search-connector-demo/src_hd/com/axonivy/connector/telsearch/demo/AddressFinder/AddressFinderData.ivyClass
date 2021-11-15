@@ -2,5 +2,5 @@ AddressFinderData #class
 com.axonivy.connector.telsearch.demo.AddressFinder #namespace
 search String #field
 search PERSISTENT #fieldModifier
-matches java.util.List<String> #field
-matches PERSISTENT #fieldModifier
+entries java.util.List<String> #field
+entries PERSISTENT #fieldModifier

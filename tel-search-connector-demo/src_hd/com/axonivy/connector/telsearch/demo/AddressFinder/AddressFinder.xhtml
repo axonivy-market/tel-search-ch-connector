@@ -28,11 +28,11 @@
 
 				</h:panelGrid>
 				<br />
-				<p:orderList value="#{data.matches}" var="match" responsive="true"
-					style="width:400px" itemValue="#{match}" converter="ivy.ListItem"
-					id="personsList" controlsLocation="right">
-					<f:facet name="caption">Matches</f:facet>
-					<p:column>#{match}</p:column>
+				<p:orderList value="#{data.entries}" var="entry" responsive="true"
+					style="width:400px" itemValue="#{entry}" converter="ivy.ListItem"
+					id="entryList" controlsLocation="right">
+					<f:facet name="caption">Entries</f:facet>
+					<p:column>#{entry}</p:column>
 				</p:orderList>
 
 
