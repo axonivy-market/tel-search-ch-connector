@@ -36,6 +36,7 @@ Py0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 </elementInfo>
 ' #txt
 Py0 f0 81 49 30 30 -13 17 #rect
+Py0 f0 res:/webContent/icons/searchCH200x200.png?small #fDecoratorIcon
 Py0 f1 337 49 30 30 0 15 #rect
 Py0 f3 clientId 20621516-9434-437b-8a8d-d41da2e7917b #txt
 Py0 f3 queryParams 'was=in.what;
