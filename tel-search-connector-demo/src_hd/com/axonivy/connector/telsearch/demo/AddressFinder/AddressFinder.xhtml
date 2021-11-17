@@ -14,19 +14,32 @@
 				<a href="https://tel.search.ch">tel.search.ch</a> based address
 				finder
 			</h3>
+			<p>
+				This demo shows how easy you can retrieve phone directory entries
+				using the tel.search.ch API. To do so, you must enter a general
+				search string (e.g. name or phone number) that will be passed to the
+				underlying PhoneDirectory subprocess in which the API request takes
+				place. <BR /> <BR /> Note that you can use the API without a key,
+				but the number of requests is limited. An API key can be requested <a
+					href="https://tel.search.ch/api/getkey">here</a>. If you want to
+				use your own API key, you can simply add it to variables.yaml
+				(tel.search.api.key).
+			</p>
 
 			<h:form id="form">
 				<p:messages />
-				<h:panelGrid columns="3">
+				<p:panelGrid columns="3" layout="grid">
+					<f:facet name="header">
+						<h:outputText value="Enter a search string, e.g. name or phone number." />
+					</f:facet>
 					<p:outputLabel value="Search" for="Search" style="float:left" />
 					<p:inputText value="#{data.search}" id="Search" required="false"
 						style="float:left" />
 
 					<p:commandButton id="Find" actionListener="#{logic.find}"
 						ajax="false" value="Find" update="form" icon="ui-icon-search" />
-					<p:spacer />
 
-				</h:panelGrid>
+				</p:panelGrid>
 				<br />
 				<p:orderList value="#{data.entries}" var="entry" responsive="true"
 					style="width:400px" itemValue="#{entry}" converter="ivy.ListItem"
@@ -39,10 +52,8 @@
 
 
 				<div class="command-btns">
-					<p:commandLink id="cancel"
-						actionListener="#{ivyWorkflowView.cancel()}" value="Cancel" />
-					<p:commandButton id="proceed" actionListener="#{logic.close}"
-						value="Proceed" update="form" icon="ui-icon-check" />
+					<p:commandButton id="done" actionListener="#{logic.close}"
+						value="Done" update="form" icon="ui-icon-check" />
 				</div>
 			</h:form>
 
