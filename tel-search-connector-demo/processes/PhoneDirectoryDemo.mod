@@ -14,6 +14,7 @@ Po0 @EndTask f6 '' #zField
 Po0 @UserDialog f8 '' #zField
 Po0 @PushWFArc f9 '' #zField
 Po0 @PushWFArc f7 '' #zField
+Po0 @InfoButton f0 '' #zField
 >Proto Po0 Po0 PhoneDirectoryDemo #zField
 Po0 f5 outLink phoneDirectoryRequest.ivp #txt
 Po0 f5 inParamDecl '<> param;' #txt
@@ -30,8 +31,8 @@ Po0 f5 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 </elementInfo>
 ' #txt
 Po0 f5 @C|.responsibility Everybody #txt
-Po0 f5 41 49 30 30 -24 17 #rect
-Po0 f6 297 49 30 30 0 15 #rect
+Po0 f5 41 177 30 30 -24 17 #rect
+Po0 f6 297 177 30 30 0 15 #rect
 Po0 f8 dialogId com.axonivy.connector.telsearch.demo.AddressFinder #txt
 Po0 f8 startMethod start() #txt
 Po0 f8 requestActionDecl '<> param;' #txt
@@ -44,9 +45,23 @@ Po0 f8 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Po0 f8 128 42 112 44 -40 -8 #rect
-Po0 f9 71 64 128 64 #arcP
-Po0 f7 240 64 297 64 #arcP
+Po0 f8 128 170 112 44 -40 -8 #rect
+Po0 f9 71 192 128 192 #arcP
+Po0 f7 240 192 297 192 #arcP
+Po0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>This demo shows how easy you can retrieve phone directory entries using the tel.search.ch API.&#13;
+To do so, you must enter a general search string (e.g. name or phone number) that will be passed&#13;
+to the underlying PhoneDirectory subprocess in which the API request takes place.&#13;
+&#13;
+Note that you can use the API without a key, but the number of requests is limited.&#13;
+An API key can be requested here: https://tel.search.ch/api/getkey. If you want to use your own API key,&#13;
+you can simply add it to variables.yaml (tel.search.api.key).</name>
+    </language>
+</elementInfo>
+' #txt
+Po0 f0 32 26 560 124 -275 -56 #rect
 >Proto Po0 .type com.axonivy.connector.telsearch.tel.search.connector.demo.Data #txt
 >Proto Po0 .processKind NORMAL #txt
 >Proto Po0 0 0 32 24 18 0 #rect

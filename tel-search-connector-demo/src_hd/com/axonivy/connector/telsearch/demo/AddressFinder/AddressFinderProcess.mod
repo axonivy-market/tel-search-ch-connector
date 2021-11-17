@@ -68,7 +68,6 @@ As0 f9 requestMappingAction 'param.what=in.search;
 ' #txt
 As0 f9 responseMappingAction 'out=in;
 out.entries=result.matches;
-out.search="";
 ' #txt
 As0 f9 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
