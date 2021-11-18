@@ -7,4 +7,4 @@ Axon Ivy's **tel.search.ch** connector helps you to accelerate process automatio
 
 ## Demo
 
-![tel.search.ch Demo 1](screen1.png "tel.search.ch Demo 1")
+![tel.search.ch Demo 1](images/screen1.png "tel.search.ch Demo 1")
