@@ -1,4 +1,4 @@
-package com.axonivy.telsearch;
+package com.axonivy.connector.telsearch;
 
 import java.io.IOException;
 import java.net.URI;
