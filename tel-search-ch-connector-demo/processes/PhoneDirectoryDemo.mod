@@ -52,7 +52,7 @@ Po0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
         <name>This demo shows how easy you can retrieve phone directory entries using the tel.search.ch API.&#13;
-To do so, you must enter a general search string (e.g. name or phone number) that will be passed&#13;
+To do so, you can enter a "what" (e.g. name or phone number) or a "where" (e.g. location or street) that will be passed&#13;
 to the underlying PhoneDirectory subprocess in which the API request takes place.&#13;
 &#13;
 Note that you can use the API without a key, but the number of requests is limited.&#13;
@@ -61,7 +61,7 @@ you can simply add it to variables.yaml (tel.search.api.key).</name>
     </language>
 </elementInfo>
 ' #txt
-Po0 f0 32 26 560 124 -275 -56 #rect
+Po0 f0 32 18 640 124 -317 -56 #rect
 >Proto Po0 .type com.axonivy.connector.telsearch.tel.search.connector.demo.Data #txt
 >Proto Po0 .processKind NORMAL #txt
 >Proto Po0 0 0 32 24 18 0 #rect
