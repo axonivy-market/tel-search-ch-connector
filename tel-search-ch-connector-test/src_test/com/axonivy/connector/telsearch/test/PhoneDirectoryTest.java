@@ -27,8 +27,8 @@ public class PhoneDirectoryTest {
   @Test
   public void performRequest(BpmClient bpmClient, AppFixture fixture) {
     fixture.environment("mock");
-    BpmElement requestStartable = testeePhoneDirectoryRequest.elementName("search(String)");
-    ExecutionResult requestResult = bpmClient.start().subProcess(requestStartable).execute("John Meier");
+    BpmElement requestStartable = testeePhoneDirectoryRequest.elementName("search(String,String)");
+    ExecutionResult requestResult = bpmClient.start().subProcess(requestStartable).execute("John Meier","");
     PhoneDirectoryData requestData = requestResult.data().last();
     assertThat(requestData.getMatches().size()).isEqualTo(8);
     assertThat(requestData.getMatches().get(0)).startsWith("Meier, John");
