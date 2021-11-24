@@ -16,24 +16,28 @@
 			</h3>
 			<p>
 				This demo shows how easy you can retrieve phone directory entries
-				using the tel.search.ch API. To do so, you must enter a general
-				search string (e.g. name or phone number) that will be passed to the
-				underlying PhoneDirectory subprocess in which the API request takes
-				place. <BR /> <BR /> Note that you can use the API without a key,
-				but the number of requests is limited. An API key can be requested <a
-					href="https://tel.search.ch/api/getkey">here</a>. If you want to
-				use your own API key, you can simply add it to variables.yaml
-				(tel.search.api.key).
+				using the tel.search.ch API. To do so, you can enter a "what" (e.g
+				name or phone number) or a "where" (e.g. location or street) that
+				will be passed to the underlying PhoneDirectory subprocess in which
+				the API request takes place. <BR /> <BR /> Note that you can use
+				the API without a key, but the number of requests is limited. An API
+				key can be requested <a href="https://tel.search.ch/api/getkey">here</a>.
+				If you want to use your own API key, you can simply add it to
+				variables.yaml (tel.search.api.key).
 			</p>
 
 			<h:form id="form">
 				<p:messages />
-				<p:panelGrid columns="3" layout="grid">
+				<p:panelGrid columns="5" layout="grid">
 					<f:facet name="header">
-						<h:outputText value="Enter a search string, e.g. name or phone number." />
+						<h:outputText
+							value="Enter a search string, e.g. name or location." />
 					</f:facet>
-					<p:outputLabel value="Search" for="Search" style="float:left" />
-					<p:inputText value="#{data.search}" id="Search" required="false"
+					<p:outputLabel value="What" for="What" style="float:left" />
+					<p:inputText value="#{data.what}" id="What" required="false"
+						style="float:left" />
+					<p:outputLabel value="Where" for="Where" style="float:left" />
+					<p:inputText value="#{data.where}" id="Where" required="false"
 						style="float:left" />
 
 					<p:commandButton id="Find" actionListener="#{logic.find}"
@@ -42,14 +46,24 @@
 				</p:panelGrid>
 				<br />
 				<p:orderList value="#{data.entries}" var="entry" responsive="true"
-					style="width:400px" itemValue="#{entry}" converter="ivy.ListItem"
-					id="entryList" controlsLocation="none">
+					itemValue="#{entry}" converter="ivy.ListItem" id="entryList"
+					controlsLocation="none">
 					<f:facet name="caption">Entries</f:facet>
 					<p:column>
 						<pre>#{entry}</pre>
 					</p:column>
 				</p:orderList>
-
+				<br />
+				
+				<style>
+						.ui-orderlist>.ui-g>.ui-g-12 {
+							padding: 0;
+						}
+						.ui-orderlist .ui-orderlist-list {
+						  height: 300px
+						}
+						
+				</style>
 
 				<div class="command-btns">
 					<p:commandButton id="done" actionListener="#{logic.close}"

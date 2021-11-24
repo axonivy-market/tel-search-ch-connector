@@ -15,19 +15,21 @@ Py0 @RestClientCall f3 '' #zField
 Py0 @PushWFArc f4 '' #zField
 Py0 @PushWFArc f2 '' #zField
 >Proto Py0 Py0 PhoneDirectory #zField
-Py0 f0 inParamDecl '<String what> param;' #txt
-Py0 f0 inParamInfo 'what.description=name or phone number' #txt
+Py0 f0 inParamDecl '<String what,String where> param;' #txt
+Py0 f0 inParamInfo 'what.description=name or phone number
+where.description=location' #txt
 Py0 f0 inParamTable 'out.what=param.what;
+out.where=param.where;
 ' #txt
 Py0 f0 outParamDecl '<java.util.List<String> matches> result;' #txt
 Py0 f0 outParamTable 'result.matches=in.matches;
 ' #txt
-Py0 f0 callSignature search(String) #txt
+Py0 f0 callSignature search(String,String) #txt
 Py0 f0 @CG|tags connector #txt
 Py0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>search(String)</name>
+        <name>search(String,String)</name>
         <tool>
             <toolName></toolName>
             <url></url>
@@ -40,6 +42,7 @@ Py0 f0 res:/webContent/icons/searchCH200x200.png?small #fDecoratorIcon
 Py0 f1 337 49 30 30 0 15 #rect
 Py0 f3 clientId 20621516-9434-437b-8a8d-d41da2e7917b #txt
 Py0 f3 queryParams 'was=in.what;
+wo=in.where;
 ' #txt
 Py0 f3 resultType cz.jirutka.atom.jaxb.Feed #txt
 Py0 f3 responseCode 'import org.w3c.dom.Element;
