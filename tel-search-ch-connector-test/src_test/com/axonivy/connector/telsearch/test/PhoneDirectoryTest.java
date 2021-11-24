@@ -37,7 +37,7 @@ public class PhoneDirectoryTest {
 
   @Test
   public void authKeyFeature(AppFixture fixture) {
-    System.setProperty("ivy.Applications.test.RestClients.tel-search.Url", "http://{ivy.engine.host}:{ivy.engine.http.port}/{ivy.request.application}/api/telMock");
+    System.setProperty("ivy.Applications.test.RestClients.tel-search.Url", "{ivy.app.baseurl}/api/telMock");
     ((IApplicationInternal) IApplication.current()).reloadConfig();
     fixture.var("tel.search.api.key", "123_test");
     
