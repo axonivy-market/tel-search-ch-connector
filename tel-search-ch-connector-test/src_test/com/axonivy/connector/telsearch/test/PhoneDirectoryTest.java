@@ -10,6 +10,8 @@ import org.junit.jupiter.api.Test;
 
 import com.axonivy.connector.telsearch.tel.search.connector.PhoneDirectoryData;
 
+import ch.ivyteam.ivy.application.IApplication;
+import ch.ivyteam.ivy.application.IApplicationInternal;
 import ch.ivyteam.ivy.bpm.engine.client.BpmClient;
 import ch.ivyteam.ivy.bpm.engine.client.ExecutionResult;
 import ch.ivyteam.ivy.bpm.engine.client.element.BpmElement;
@@ -26,7 +28,6 @@ public class PhoneDirectoryTest {
 
   @Test
   public void performRequest(BpmClient bpmClient, AppFixture fixture) {
-    fixture.environment("mock");
     BpmElement requestStartable = testeePhoneDirectoryRequest.elementName("search(String,String)");
     ExecutionResult requestResult = bpmClient.start().subProcess(requestStartable).execute("John Meier","");
     PhoneDirectoryData requestData = requestResult.data().last();
@@ -36,8 +37,10 @@ public class PhoneDirectoryTest {
 
   @Test
   public void authKeyFeature(AppFixture fixture) {
-    fixture.environment("mock");
+    System.setProperty("ivy.Applications.test.RestClients.tel-search.Url", "http://{ivy.engine.host}:{ivy.engine.http.port}/{ivy.request.application}/api/telMock");
+    ((IApplicationInternal) IApplication.current()).reloadConfig();
     fixture.var("tel.search.api.key", "123_test");
+    
     Response response = Ivy.rest()
             .client(UUID.fromString("20621516-9434-437b-8a8d-d41da2e7917b"))
             .queryParam("was", "Müller")
@@ -45,5 +48,4 @@ public class PhoneDirectoryTest {
     assertThat(response.getStatus()).isEqualTo(200);
     assertThat(response.getHeaderString(DirectoryMock.MY_KEY)).isEqualTo("123_test");
   }
-
 }
