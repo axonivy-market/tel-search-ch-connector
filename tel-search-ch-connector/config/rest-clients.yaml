@@ -4,5 +4,4 @@ RestClients:
     Url: https://tel.search.ch/api/
     Icon: res:/webContent/icons/searchCH200x200.png
     Features:
-    - com.axonivy.connector.telsearch.AtomXmlFeature
     - com.axonivy.connector.telsearch.AuthKeyFeature
