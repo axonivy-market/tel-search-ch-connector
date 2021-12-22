@@ -1,0 +1,8 @@
+Dialogs:
+  com:
+    axonivy:
+      connector:
+        telsearch:
+          demo:
+            AddressFinder:
+              Find: Find
