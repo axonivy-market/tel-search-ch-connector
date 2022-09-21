@@ -1,0 +1,54 @@
+{
+  "format" : "9.4.20",
+  "id" : "17D132BFCF818781",
+  "data" : "com.axonivy.connector.telsearch.tel.search.connector.demo.Data",
+  "elements" : [ {
+      "id" : "f5",
+      "type" : "RequestStart",
+      "name" : "phoneDirectoryRequest.ivp",
+      "config" : {
+        "callSignature" : "phoneDirectoryRequest",
+        "outLink" : "phoneDirectoryRequest.ivp",
+        "tags" : "demo"
+      },
+      "visual" : {
+        "at" : { "x" : 56, "y" : 192 },
+        "labelOffset" : { "x" : 68, "y" : 37 }
+      },
+      "connect" : { "id" : "f9", "to" : "f8" }
+    }, {
+      "id" : "f6",
+      "type" : "TaskEnd",
+      "visual" : {
+        "at" : { "x" : 312, "y" : 192 }
+      }
+    }, {
+      "id" : "f8",
+      "type" : "DialogCall",
+      "name" : "AddressFinder",
+      "config" : {
+        "dialogId" : "com.axonivy.connector.telsearch.demo.AddressFinder",
+        "startMethod" : "start()"
+      },
+      "visual" : {
+        "at" : { "x" : 184, "y" : 192 }
+      },
+      "connect" : { "id" : "f7", "to" : "f6" }
+    }, {
+      "id" : "f0",
+      "type" : "ProcessAnnotation",
+      "name" : [
+        "This demo shows how easy you can retrieve phone directory entries using the tel.search.ch API.",
+        "To do so, you can enter a \"what\" (e.g. name or phone number) or a \"where\" (e.g. location or street) that will be passed",
+        "to the underlying PhoneDirectory subprocess in which the API request takes place.",
+        "",
+        "Note that you can use the API without a key, but the number of requests is limited.",
+        "An API key can be requested here: https://tel.search.ch/api/getkey. If you want to use your own API key,",
+        "you can simply add it to variables.yaml (tel.search.api.key)."
+      ],
+      "visual" : {
+        "at" : { "x" : 352, "y" : 80 },
+        "size" : { "width" : 640, "height" : 124 }
+      }
+    } ]
+}
