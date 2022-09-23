@@ -29,6 +29,7 @@
         <extensions>true</extensions>
         <configuration>
           <ivyVersion>9.4.0</ivyVersion>
+          <skipScriptValidation>true</skipScriptValidation>
         </configuration>
       </plugin>
     </plugins>
