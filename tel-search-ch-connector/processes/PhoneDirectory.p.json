@@ -1,0 +1,77 @@
+{
+  "format" : "9.4.20",
+  "id" : "17D13296818E1620",
+  "data" : "com.axonivy.connector.telsearch.tel.search.connector.PhoneDirectoryData",
+  "kind" : "CALLABLE_SUB",
+  "description" : "This tel.search.ch connector allows you to pass a \"what\" in order to obtain the matching phone directory entries.",
+  "elements" : [ {
+      "id" : "f0",
+      "type" : "CallSubStart",
+      "name" : "search(String,String)",
+      "config" : {
+        "callSignature" : "search",
+        "input" : {
+          "params" : [
+            { "name" : "what", "type" : "String", "desc" : "name or phone number" },
+            { "name" : "where", "type" : "String", "desc" : "location" }
+          ],
+          "map" : {
+            "out.what" : "param.what",
+            "out.where" : "param.where"
+          }
+        },
+        "result" : {
+          "params" : [
+            { "name" : "matches", "type" : "java.util.List<String>" }
+          ],
+          "map" : {
+            "result.matches" : "in.matches"
+          }
+        },
+        "tags" : "connector"
+      },
+      "docs" : {
+        "" : ""
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 64 },
+        "labelOffset" : { "x" : 60, "y" : 37 },
+        "icon" : "res:/webContent/icons/searchCH200x200.png?small"
+      },
+      "connect" : { "id" : "f4", "to" : "f3" }
+    }, {
+      "id" : "f1",
+      "type" : "CallSubEnd",
+      "visual" : {
+        "at" : { "x" : 352, "y" : 64 }
+      }
+    }, {
+      "id" : "f3",
+      "type" : "RestClientCall",
+      "config" : {
+        "clientId" : "20621516-9434-437b-8a8d-d41da2e7917b",
+        "clientErrorCode" : "ivy:error:rest:client",
+        "queryParams" : {
+          "was" : "in.what",
+          "wo" : "in.where"
+        },
+        "statusErrorCode" : "ivy:error:rest:client",
+        "resultType" : "cz.jirutka.atom.jaxb.Feed",
+        "responseCode" : [
+          "import org.w3c.dom.Element;",
+          "import cz.jirutka.atom.jaxb.Entry;",
+          "",
+          "ivy.log.debug(result);",
+          "",
+          "for(Entry entry : result.entries){",
+          "  Element element = entry.content as Element;",
+          "  out.matches.add(element.getTextContent());",
+          "}"
+        ]
+      },
+      "visual" : {
+        "at" : { "x" : 224, "y" : 64 }
+      },
+      "connect" : { "id" : "f2", "to" : "f1" }
+    } ]
+}
