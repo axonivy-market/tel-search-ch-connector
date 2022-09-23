@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.axonivy.connector.telsearch</groupId>
   <artifactId>tel-search-ch-connector</artifactId>
   <version>9.4.0</version>
   <packaging>iar</packaging>
-  <repositories>
-    <repository>
-      <id>cvut-local-repos</id>
-      <name>CVUT Repository Local</name>
-      <url>https://repository.fit.cvut.cz/maven/local-repos/</url>
-    </repository>
-  </repositories>
   <dependencies>
     <dependency>
       <groupId>cz.jirutka.atom</groupId>
@@ -19,12 +13,19 @@
       <version>1.0.1</version>
     </dependency>
   </dependencies>
+  <repositories>
+    <repository>
+      <id>cvut-local-repos</id>
+      <name>CVUT Repository Local</name>
+      <url>https://repository.fit.cvut.cz/maven/local-repos/</url>
+    </repository>
+  </repositories>
   <build>
     <plugins>
       <plugin>
         <groupId>com.axonivy.ivy.ci</groupId>
         <artifactId>project-build-plugin</artifactId>
-        <version>9.3.1</version>
+        <version>9.4.1</version>
         <extensions>true</extensions>
         <configuration>
           <ivyVersion>9.4.0</ivyVersion>
