@@ -58,19 +58,15 @@
         "statusErrorCode" : "ivy:error:rest:client",
         "resultType" : "cz.jirutka.atom.jaxb.Feed",
         "responseCode" : [
-          "import org.w3c.dom.Element;",
-          "import cz.jirutka.atom.jaxb.Entry;",
+          "import com.axonivy.connector.telsearch.TelSearchApiHelper;",
           "",
           "ivy.log.debug(result);",
-          "",
-          "for(Entry entry : result.entries){",
-          "  Element element = entry.content as Element;",
-          "  out.matches.add(element.getTextContent());",
-          "}"
+          "out.matches = TelSearchApiHelper.createMatchList(result.entries);"
         ]
       },
       "visual" : {
-        "at" : { "x" : 224, "y" : 64 }
+        "at" : { "x" : 224, "y" : 64 },
+        "icon" : "res:/webContent/icons/searchCH200x200.png"
       },
       "connect" : { "id" : "f2", "to" : "f1" }
     } ]
