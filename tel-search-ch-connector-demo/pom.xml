@@ -13,16 +13,25 @@
       <type>iar</type>
     </dependency>
   </dependencies>
+  <pluginRepositories>
+    <pluginRepository>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+      <id>central.snapshots</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </pluginRepository>
+  </pluginRepositories>
   <build>
     <plugins>
       <plugin>
         <groupId>com.axonivy.ivy.ci</groupId>
         <artifactId>project-build-plugin</artifactId>
-        <version>9.4.1</version>
+        <version>10.0.0-SNAPSHOT</version>
         <extensions>true</extensions>
-        <configuration>
-          <ivyVersion>9.4.0</ivyVersion>
-        </configuration>
       </plugin>
     </plugins>
   </build>
