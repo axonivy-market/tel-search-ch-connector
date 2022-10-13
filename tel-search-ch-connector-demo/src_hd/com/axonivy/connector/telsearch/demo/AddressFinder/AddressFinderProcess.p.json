@@ -1,8 +1,10 @@
 {
-  "format" : "9.4.20",
+  "format" : "10.0.0",
   "id" : "17D14C4DFA5FA288",
-  "data" : "com.axonivy.connector.telsearch.demo.AddressFinder.AddressFinderData",
   "kind" : "HTML_DIALOG",
+  "config" : {
+    "data" : "com.axonivy.connector.telsearch.demo.AddressFinder.AddressFinderData"
+  },
   "elements" : [ {
       "id" : "f0",
       "type" : "HtmlDialogStart",

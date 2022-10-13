@@ -1,9 +1,11 @@
 {
-  "format" : "9.4.20",
+  "format" : "10.0.0",
   "id" : "17D13296818E1620",
-  "data" : "com.axonivy.connector.telsearch.tel.search.connector.PhoneDirectoryData",
   "kind" : "CALLABLE_SUB",
   "description" : "This tel.search.ch connector allows you to pass a \"what\" in order to obtain the matching phone directory entries.",
+  "config" : {
+    "data" : "com.axonivy.connector.telsearch.tel.search.connector.PhoneDirectoryData"
+  },
   "elements" : [ {
       "id" : "f0",
       "type" : "CallSubStart",
