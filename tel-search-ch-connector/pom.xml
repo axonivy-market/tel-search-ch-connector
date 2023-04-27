@@ -11,15 +11,10 @@
       <groupId>cz.jirutka.atom</groupId>
       <artifactId>atom-jaxb</artifactId>
       <version>1.0.1</version>
+      <scope>system</scope>
+      <systemPath>${basedir}/lib/atom-jaxb-1.0.1.jar</systemPath>
     </dependency>
   </dependencies>
-  <repositories>
-    <repository>
-      <id>cvut-local-repos</id>
-      <name>CVUT Repository Local</name>
-      <url>https://repository.fit.cvut.cz/maven/local-repos/</url>
-    </repository>
-  </repositories>
   <pluginRepositories>
     <pluginRepository>
       <releases>
