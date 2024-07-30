@@ -18,7 +18,7 @@ import ch.ivyteam.ivy.environment.AppFixture;
 import ch.ivyteam.ivy.environment.Ivy;
 import ch.telsearch.DirectoryMock;
 
-@IvyProcessTest
+@IvyProcessTest(enableWebServer = true)
 public class PhoneDirectoryTest {
 
   private static final BpmProcess testeePhoneDirectoryRequest = BpmProcess.path("PhoneDirectory");
