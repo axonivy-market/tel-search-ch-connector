@@ -1,5 +1,5 @@
 {
-  "format" : "10.0.0",
+  "$schema" : "https://json-schema.axonivy.com/process/12.0.0/process.json",
   "id" : "17D13296818E1620",
   "kind" : "CALLABLE_SUB",
   "description" : "This tel.search.ch connector allows you to pass a \"what\" in order to obtain the matching phone directory entries.",
@@ -11,7 +11,7 @@
       "type" : "CallSubStart",
       "name" : "search(String,String)",
       "config" : {
-        "callSignature" : "search",
+        "signature" : "search",
         "input" : {
           "params" : [
             { "name" : "what", "type" : "String", "desc" : "name or phone number" },
@@ -24,23 +24,27 @@
         },
         "result" : {
           "params" : [
-            { "name" : "matches", "type" : "java.util.List<String>" }
+            { "name" : "matches", "type" : "java.util.List<String>", "desc" : "" }
           ],
           "map" : {
             "result.matches" : "in.matches"
           }
-        },
-        "tags" : "connector"
+        }
       },
       "docs" : {
         "" : ""
       },
+      "tags" : [
+        "connector"
+      ],
       "visual" : {
         "at" : { "x" : 96, "y" : 64 },
         "labelOffset" : { "x" : 60, "y" : 37 },
         "icon" : "res:/webContent/icons/searchCH200x200.png?small"
       },
-      "connect" : { "id" : "f4", "to" : "f3" }
+      "connect" : [
+        { "id" : "f4", "to" : "f3" }
+      ]
     }, {
       "id" : "f1",
       "type" : "CallSubEnd",
@@ -51,25 +55,31 @@
       "id" : "f3",
       "type" : "RestClientCall",
       "config" : {
-        "clientId" : "20621516-9434-437b-8a8d-d41da2e7917b",
-        "clientErrorCode" : "ivy:error:rest:client",
-        "queryParams" : {
-          "was" : "in.what",
-          "wo" : "in.where"
+        "target" : {
+          "clientId" : "20621516-9434-437b-8a8d-d41da2e7917b",
+          "queryParams" : {
+            "was" : "in.what",
+            "wo" : "in.where"
+          }
         },
-        "statusErrorCode" : "ivy:error:rest:client",
-        "resultType" : "cz.jirutka.atom.jaxb.Feed",
-        "responseCode" : [
-          "import com.axonivy.connector.telsearch.TelSearchApiHelper;",
-          "",
-          "ivy.log.debug(result);",
-          "out.matches = TelSearchApiHelper.createMatchList(result.entries);"
-        ]
+        "response" : {
+          "entity" : {
+            "type" : "cz.jirutka.atom.jaxb.Feed",
+            "code" : [
+              "import com.axonivy.connector.telsearch.TelSearchApiHelper;",
+              "",
+              "ivy.log.debug(result);",
+              "out.matches = TelSearchApiHelper.createMatchList(result.entries);"
+            ]
+          }
+        }
       },
       "visual" : {
         "at" : { "x" : 224, "y" : 64 },
         "icon" : "res:/webContent/icons/searchCH200x200.png"
       },
-      "connect" : { "id" : "f2", "to" : "f1" }
+      "connect" : [
+        { "id" : "f2", "to" : "f1" }
+      ]
     } ]
 }
