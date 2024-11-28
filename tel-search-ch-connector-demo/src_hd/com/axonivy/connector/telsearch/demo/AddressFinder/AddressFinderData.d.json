@@ -1,0 +1,19 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/data-class/12.0.0/data-class.json",
+  "simpleName" : "AddressFinderData",
+  "namespace" : "com.axonivy.connector.telsearch.demo.AddressFinder",
+  "isBusinessCaseData" : false,
+  "fields" : [ {
+    "name" : "entries",
+    "type" : "java.util.List<String>",
+    "modifiers" : [ "PERSISTENT" ]
+  }, {
+    "name" : "what",
+    "type" : "String",
+    "modifiers" : [ "PERSISTENT" ]
+  }, {
+    "name" : "where",
+    "type" : "String",
+    "modifiers" : [ "PERSISTENT" ]
+  } ]
+}
