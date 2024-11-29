@@ -1,5 +1,5 @@
 {
-  "format" : "10.0.0",
+  "$schema" : "https://json-schema.axonivy.com/process/12.0.0/process.json",
   "id" : "17D132BFCF818781",
   "config" : {
     "data" : "com.axonivy.connector.telsearch.tel.search.connector.demo.Data"
@@ -9,15 +9,18 @@
       "type" : "RequestStart",
       "name" : "phoneDirectoryRequest.ivp",
       "config" : {
-        "callSignature" : "phoneDirectoryRequest",
-        "outLink" : "phoneDirectoryRequest.ivp",
-        "tags" : "demo"
+        "signature" : "phoneDirectoryRequest"
       },
+      "tags" : [
+        "demo"
+      ],
       "visual" : {
         "at" : { "x" : 56, "y" : 192 },
         "labelOffset" : { "x" : 68, "y" : 37 }
       },
-      "connect" : { "id" : "f9", "to" : "f8" }
+      "connect" : [
+        { "id" : "f9", "to" : "f8" }
+      ]
     }, {
       "id" : "f6",
       "type" : "TaskEnd",
@@ -29,13 +32,14 @@
       "type" : "DialogCall",
       "name" : "AddressFinder",
       "config" : {
-        "dialogId" : "com.axonivy.connector.telsearch.demo.AddressFinder",
-        "startMethod" : "start()"
+        "dialog" : "com.axonivy.connector.telsearch.demo.AddressFinder:start()"
       },
       "visual" : {
         "at" : { "x" : 184, "y" : 192 }
       },
-      "connect" : { "id" : "f7", "to" : "f6" }
+      "connect" : [
+        { "id" : "f7", "to" : "f6" }
+      ]
     }, {
       "id" : "f0",
       "type" : "ProcessAnnotation",
