@@ -28,7 +28,7 @@
 
 			<h:form id="form">
 				<p:messages />
-				<p:panelGrid columns="5" layout="grid">
+				<p:panelGrid columns="6" layout="grid">
 					<f:facet name="header">
 						<h:outputText
 							value="Enter a search string, e.g. name or location." />
@@ -39,7 +39,7 @@
 					<p:outputLabel value="Where" for="Where" style="float:left" />
 					<p:inputText value="#{data.where}" id="Where" required="false"
 						style="float:left" />
-
+					<h:panelGroup/>
 					<p:commandButton id="Find" actionListener="#{logic.find}"
 						ajax="false" value="Find" update="form" icon="ui-icon-search" />
 
