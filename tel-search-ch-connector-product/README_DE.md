@@ -7,7 +7,3 @@ Mit dem Konnektor kannst du:
 - einen Suchbegriff eingeben und passende Telefonbucheinträge über die tel.search.ch API abrufen.
 - einen eigenen API-Schlüssel hinzufügen.
 - Dank einer Demo-Implementierung den Integrationsaufwand minimieren.
-
-## Demo
-
-![tel.search.ch Demo 1](images/screen1.png "tel.search.ch Demo 1")
