@@ -4,8 +4,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import javax.ws.rs.core.Response;
 
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.TestTemplate;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.api.extension.ExtensionContext;
 
 import com.axonivy.connector.telsearch.tel.search.connector.PhoneDirectoryData;
 
@@ -17,34 +19,42 @@ import ch.ivyteam.ivy.bpm.exec.client.IvyProcessTest;
 import ch.ivyteam.ivy.environment.AppFixture;
 import ch.ivyteam.ivy.environment.Ivy;
 import ch.telsearch.DirectoryMock;
+import constant.TelSearchConstant;
+import context.MultiEnvironmentContextProvider;
+import utils.TelSearchUtils;
 
 @IvyProcessTest(enableWebServer = true)
+@ExtendWith(MultiEnvironmentContextProvider.class)
 public class PhoneDirectoryTest {
 
   private static final BpmProcess testeePhoneDirectoryRequest = BpmProcess.path("PhoneDirectory");
+  private boolean isRealContext = false;
 
-  @BeforeAll
-  static void setup(AppFixture fixture) {
-    fixture.config("RestClients.tel-search.Url", "{ivy.app.baseurl}/api/telMock");
+  @BeforeEach
+  void beforeEach(ExtensionContext context, AppFixture fixture) {
+    TelSearchUtils.setUpConfigForContext(context.getDisplayName(), fixture);
+    isRealContext = context.getDisplayName().equals(TelSearchConstant.REAL_CALL_CONTEXT_DISPLAY_NAME);
   }
 
-  @Test
-  public void performRequest(BpmClient bpmClient) {
+  @TestTemplate
+  public void performRequest(ExtensionContext context, BpmClient bpmClient) {
     BpmElement requestStartable = testeePhoneDirectoryRequest.elementName("search(String,String)");
     ExecutionResult requestResult = bpmClient.start().subProcess(requestStartable).execute("John Meier", "");
     PhoneDirectoryData requestData = requestResult.data().last();
-    assertThat(requestData.getMatches().size()).isEqualTo(8);
-    assertThat(requestData.getMatches().get(0)).startsWith("Meier, John");
+    if (isRealContext) {
+      assertThat(requestData.getMatches().size()).isGreaterThan(1);
+    } else {
+      assertThat(requestData.getMatches().size()).isEqualTo(8);
+      assertThat(requestData.getMatches().get(0)).startsWith("Meier, John");
+    }
   }
 
-  @Test
-  public void authKeyFeature(AppFixture fixture) {
-    fixture.var("tel.search.api.key", "123_test");
-    Response response = Ivy.rest()
-            .client("tel-search")
-            .queryParam("was", "Müller")
-            .request().get();
+  @TestTemplate
+  public void authKeyFeature(ExtensionContext context, AppFixture fixture) {
+    Response response = Ivy.rest().client("tel-search").queryParam("was", "Müller").request().get();
+    if (!isRealContext) {
+      assertThat(response.getHeaderString(DirectoryMock.MY_KEY)).isEqualTo("123_test");
+    }
     assertThat(response.getStatus()).isEqualTo(200);
-    assertThat(response.getHeaderString(DirectoryMock.MY_KEY)).isEqualTo("123_test");
   }
 }
