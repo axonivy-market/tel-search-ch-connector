@@ -1,15 +1,15 @@
 package utils;
 
 import ch.ivyteam.ivy.environment.AppFixture;
-import constant.TelSearchConstant;
+import constant.TelSearchTestConstant;
 
-public class TelSearchUtils {
+public class TelSearchTestUtils {
   public static void setUpConfigForContext(String contextName, AppFixture fixture) {
     switch (contextName) {
-      case TelSearchConstant.REAL_CALL_CONTEXT_DISPLAY_NAME:
+      case TelSearchTestConstant.REAL_CALL_CONTEXT_DISPLAY_NAME:
         setUpConfigForApiTest(fixture);
         break;
-      case TelSearchConstant.MOCK_SERVER_CONTEXT_DISPLAY_NAME:
+      case TelSearchTestConstant.MOCK_SERVER_CONTEXT_DISPLAY_NAME:
         setUpConfigForMockServer(fixture);
         break;
       default:
@@ -18,7 +18,7 @@ public class TelSearchUtils {
   }
 
   private static void setUpConfigForApiTest(AppFixture fixture) {
-    String apiKey = System.getProperty(TelSearchConstant.API_KEY);
+    String apiKey = System.getProperty(TelSearchTestConstant.API_KEY);
     fixture.var("tel.search.api.key", apiKey);
   }
 

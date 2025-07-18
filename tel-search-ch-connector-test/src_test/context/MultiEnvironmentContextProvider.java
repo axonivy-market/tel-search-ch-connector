@@ -6,7 +6,7 @@ import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.TestTemplateInvocationContext;
 import org.junit.jupiter.api.extension.TestTemplateInvocationContextProvider;
 
-import constant.TelSearchConstant;
+import constant.TelSearchTestConstant;
 
 public class MultiEnvironmentContextProvider implements TestTemplateInvocationContextProvider {
 
@@ -17,7 +17,7 @@ public class MultiEnvironmentContextProvider implements TestTemplateInvocationCo
 
   @Override
   public Stream<TestTemplateInvocationContext> provideTestTemplateInvocationContexts(ExtensionContext context) {
-    return Stream.of(new TestEnironmentInvocationContext(TelSearchConstant.REAL_CALL_CONTEXT_DISPLAY_NAME),
-        new TestEnironmentInvocationContext(TelSearchConstant.MOCK_SERVER_CONTEXT_DISPLAY_NAME));
+    return Stream.of(new TestEnironmentInvocationContext(TelSearchTestConstant.REAL_CALL_CONTEXT_DISPLAY_NAME),
+        new TestEnironmentInvocationContext(TelSearchTestConstant.MOCK_SERVER_CONTEXT_DISPLAY_NAME));
   }
 }
