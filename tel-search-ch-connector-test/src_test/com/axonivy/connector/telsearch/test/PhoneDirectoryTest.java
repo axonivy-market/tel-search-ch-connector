@@ -19,9 +19,9 @@ import ch.ivyteam.ivy.bpm.exec.client.IvyProcessTest;
 import ch.ivyteam.ivy.environment.AppFixture;
 import ch.ivyteam.ivy.environment.Ivy;
 import ch.telsearch.DirectoryMock;
-import constant.TelSearchConstant;
+import constant.TelSearchTestConstant;
 import context.MultiEnvironmentContextProvider;
-import utils.TelSearchUtils;
+import utils.TelSearchTestUtils;
 
 @IvyProcessTest(enableWebServer = true)
 @ExtendWith(MultiEnvironmentContextProvider.class)
@@ -32,8 +32,8 @@ public class PhoneDirectoryTest {
 
   @BeforeEach
   void beforeEach(ExtensionContext context, AppFixture fixture) {
-    TelSearchUtils.setUpConfigForContext(context.getDisplayName(), fixture);
-    isRealContext = context.getDisplayName().equals(TelSearchConstant.REAL_CALL_CONTEXT_DISPLAY_NAME);
+    TelSearchTestUtils.setUpConfigForContext(context.getDisplayName(), fixture);
+    isRealContext = context.getDisplayName().equals(TelSearchTestConstant.REAL_CALL_CONTEXT_DISPLAY_NAME);
   }
 
   @TestTemplate
