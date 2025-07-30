@@ -9,5 +9,3 @@ on:
 jobs:
   build:
     uses: axonivy-market/github-workflows/.github/workflows/dev.yml@v6
-    secrets:
-      mvnArgs: -Dtelsearch.apiKey=${{secrets.API_KEY}}
