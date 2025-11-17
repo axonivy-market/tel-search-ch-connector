@@ -1,9 +1,21 @@
-# tel.search.ch
+# tel.Suche.ch
+#Axon Efeus **tel.Suche.ch** Anschluss integriert das #Schweiz Telefon
+Telefonbuch versah mal [tel.Suche.ch](https://search.ch/tel/). Dieser Anschluss
+benutzt einen REST Kunden jener erlaubt du zu #wiedergewinnen schweizerisches
+Telefon Telefonbuch Einträge schnell. Beachte jener #ohne ein API Schlüssel, die
+Nummer Bitten ist begrenzt. Für die extensivere Nutzung, du können auffordern
+eine API Schlüssel [hier](https://tel.search.ch/api/getkey). Glücklicherweise,
+du können zufügen eure API Schlüssel mit einem ledigen Klick benutzend den
+AnschlussesAuthentifizierung Charakterzug.
 
-Der Axon Ivy **tel.search.ch** Konnektor verbindet deine Prozesse direkt mit dem Schweizer Telefonverzeichnis von [tel.search.ch](https://search.ch/tel/) und nutzt dabei einen REST-Client, um Telefonbucheinträge  abzurufen. Ohne API-Schlüssel ist die Anzahl der Anfragen begrenzt, aber du kannst [hier](https://tel.search.ch/api/getkey) ganz einfach einen API-Schlüssel anfordern. Dein API-Schlüssel lässt sich mit einem Klick über die Authentifizierungsfunktion des Konnektors hinzufügen.
+Dieser Anschluss erlaubt zu:
 
-Mit dem Konnektor kannst du:
+- Spiel ab eine Suche Schnur und #wiedergewinnen passen Telefon Telefonbuch
+  Einträge via die tel.Suche.ch API
+- Füg zu eure eigenes API Schlüssel
+- Unterstützt du mit eine Demo Ausführung zu heruntersetzen eure Integration
+  Anstrengung
 
-- einen Suchbegriff eingeben und passende Telefonbucheinträge über die tel.search.ch API abrufen.
-- einen eigenen API-Schlüssel hinzufügen.
-- Dank einer Demo-Implementierung den Integrationsaufwand minimieren.
+## Demo
+
+![tel.Suche.ch Demo 1](images/screen1.png "tel.Suche.ch Demo 1")
