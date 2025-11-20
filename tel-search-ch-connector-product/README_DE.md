@@ -1,9 +1,22 @@
 # tel.search.ch
+Der Axon Ivy-Konnektor „ **” tel.search.ch** integriert das von
+[tel.search.ch](https://search.ch/tel/) bereitgestellte Schweizer
+Telefonverzeichnis. Dieser Konnektor verwendet einen REST-Client, mit dem Sie
+Einträge aus dem Schweizer Telefonverzeichnis schnell abrufen können. Beachten
+Sie, dass ohne API-Schlüssel die Anzahl der Anfragen begrenzt ist. Für eine
+umfangreichere Nutzung können Sie [hier](https://tel.search.ch/api/getkey) einen
+API-Schlüssel anfordern. Glücklicherweise können Sie Ihren API-Schlüssel mit
+einem einzigen Klick über die Authentifizierungsfunktion des Konnektors
+hinzufügen.
 
-Der Axon Ivy **tel.search.ch** Konnektor verbindet deine Prozesse direkt mit dem Schweizer Telefonverzeichnis von [tel.search.ch](https://search.ch/tel/) und nutzt dabei einen REST-Client, um Telefonbucheinträge  abzurufen. Ohne API-Schlüssel ist die Anzahl der Anfragen begrenzt, aber du kannst [hier](https://tel.search.ch/api/getkey) ganz einfach einen API-Schlüssel anfordern. Dein API-Schlüssel lässt sich mit einem Klick über die Authentifizierungsfunktion des Konnektors hinzufügen.
+Dieser Konnektor ermöglicht Folgendes:
 
-Mit dem Konnektor kannst du:
+- Übergeben Sie einen Suchbegriff und rufen Sie über die API von tel.search.ch
+  passende Einträge aus dem Telefonverzeichnis ab.
+- Fügen Sie Ihren eigenen API-Schlüssel hinzu.
+- unterstützt Sie mit einer Demo-Implementierung, um Ihren Integrationsaufwand
+  zu reduzieren.
 
-- einen Suchbegriff eingeben und passende Telefonbucheinträge über die tel.search.ch API abrufen.
-- einen eigenen API-Schlüssel hinzufügen.
-- Dank einer Demo-Implementierung den Integrationsaufwand minimieren.
+## Demo
+
+![tel.search.ch Demo 1](images/screen1.png "tel.search.ch Demo 1")
