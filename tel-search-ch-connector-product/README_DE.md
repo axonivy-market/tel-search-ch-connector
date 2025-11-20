@@ -1,21 +1,22 @@
-# tel.Suche.ch
-#Axon Efeus **tel.Suche.ch** Anschluss integriert das #Schweiz Telefon
-Telefonbuch versah mal [tel.Suche.ch](https://search.ch/tel/). Dieser Anschluss
-benutzt einen REST Kunden jener erlaubt du zu #wiedergewinnen schweizerisches
-Telefon Telefonbuch Einträge schnell. Beachte jener #ohne ein API Schlüssel, die
-Nummer Bitten ist begrenzt. Für die extensivere Nutzung, du können auffordern
-eine API Schlüssel [hier](https://tel.search.ch/api/getkey). Glücklicherweise,
-du können zufügen eure API Schlüssel mit einem ledigen Klick benutzend den
-AnschlussesAuthentifizierung Charakterzug.
+# tel.search.ch
+Der Axon Ivy-Konnektor „ **” tel.search.ch** integriert das von
+[tel.search.ch](https://search.ch/tel/) bereitgestellte Schweizer
+Telefonverzeichnis. Dieser Konnektor verwendet einen REST-Client, mit dem Sie
+Einträge aus dem Schweizer Telefonverzeichnis schnell abrufen können. Beachten
+Sie, dass ohne API-Schlüssel die Anzahl der Anfragen begrenzt ist. Für eine
+umfangreichere Nutzung können Sie [hier](https://tel.search.ch/api/getkey) einen
+API-Schlüssel anfordern. Glücklicherweise können Sie Ihren API-Schlüssel mit
+einem einzigen Klick über die Authentifizierungsfunktion des Konnektors
+hinzufügen.
 
-Dieser Anschluss erlaubt zu:
+Dieser Konnektor ermöglicht Folgendes:
 
-- Spiel ab eine Suche Schnur und #wiedergewinnen passen Telefon Telefonbuch
-  Einträge via die tel.Suche.ch API
-- Füg zu eure eigenes API Schlüssel
-- Unterstützt du mit eine Demo Ausführung zu heruntersetzen eure Integration
-  Anstrengung
+- Übergeben Sie einen Suchbegriff und rufen Sie über die API von tel.search.ch
+  passende Einträge aus dem Telefonverzeichnis ab.
+- Fügen Sie Ihren eigenen API-Schlüssel hinzu.
+- unterstützt Sie mit einer Demo-Implementierung, um Ihren Integrationsaufwand
+  zu reduzieren.
 
 ## Demo
 
-![tel.Suche.ch Demo 1](images/screen1.png "tel.Suche.ch Demo 1")
+![tel.search.ch Demo 1](images/screen1.png "tel.search.ch Demo 1")
