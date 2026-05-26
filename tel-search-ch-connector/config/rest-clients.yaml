@@ -1,7 +1,9 @@
+# yaml-language-server: $schema=https://json-schema.axonivy.com/14.0-dev/config/rest-clients-1.json
 RestClients:
   tel-search:
-    UUID: 20621516-9434-437b-8a8d-d41da2e7917b
+    Name: tel-search
     Url: https://tel.search.ch/api/
     Icon: res:/webContent/icons/searchCH200x200.png
     Features:
-    - com.axonivy.connector.telsearch.AuthKeyFeature
+      - com.axonivy.connector.telsearch.AuthKeyFeature
+    LegacyUUID: 20621516-9434-437b-8a8d-d41da2e7917b
