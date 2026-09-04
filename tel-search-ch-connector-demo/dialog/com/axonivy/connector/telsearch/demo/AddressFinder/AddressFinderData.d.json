@@ -4,10 +4,13 @@
   "namespace" : "com.axonivy.connector.telsearch.demo.AddressFinder",
   "fields" : [ {
     "name" : "entries",
-    "type" : "java.util.List<String>"
+    "type" : "java.util.List<String>",
+    "modifiers" : [ ]
   }, {
-    "name" : "what"
+    "name" : "what",
+    "modifiers" : [ ]
   }, {
-    "name" : "where"
+    "name" : "where",
+    "modifiers" : [ ]
   } ]
 }
