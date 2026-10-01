@@ -1,0 +1,13 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/14.0/project/data-class.json",
+  "simpleName" : "PhoneDirectoryData",
+  "namespace" : "com.axonivy.connector.telsearch.tel.search.connector",
+  "fields" : [ {
+    "name" : "what"
+  }, {
+    "name" : "matches",
+    "type" : "java.util.List<String>"
+  }, {
+    "name" : "where"
+  } ]
+}
