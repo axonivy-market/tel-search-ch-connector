@@ -1,0 +1,16 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/14.0/project/data-class.json",
+  "simpleName" : "AddressFinderData",
+  "namespace" : "com.axonivy.connector.telsearch.demo.AddressFinder",
+  "fields" : [ {
+    "name" : "entries",
+    "type" : "java.util.List<String>",
+    "modifiers" : [ ]
+  }, {
+    "name" : "what",
+    "modifiers" : [ ]
+  }, {
+    "name" : "where",
+    "modifiers" : [ ]
+  } ]
+}
